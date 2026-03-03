@@ -962,7 +962,7 @@ footer a {
          width: 100%;
          height: 100%;
          fill: none;
-         stroke: #f5a623;
+         stroke: #76ab58;
          stroke-width: 1.6;
          stroke-linecap: round;
          stroke-linejoin: round;
@@ -1304,7 +1304,7 @@ footer a {
       }
 
       .curr-card:hover .curr-icon svg {
-         stroke: #f5a623;
+         stroke: #76ab58;
       }
 
       /* ── Label ── */
@@ -1336,4 +1336,194 @@ footer a {
             gap: 12px;
          }
          .curr-card { min-height: auto; padding: 18px 16px; }
+      }
+
+
+
+      .ideal-for-section {
+         background: #f2f2f2;
+         padding: 65px 0 75px;
+      }
+
+      .lp-heading {
+         font-size: 2.2rem;
+         font-weight: 700;
+         color: #4d2787;
+         text-align: center;
+         margin-bottom: 48px;
+      }
+
+      /* ══════════════════════════════
+         CARD  — inspired by the lavender
+         card style in reference image 2
+      ══════════════════════════════ */
+      .ideal-card {
+         background: #ebe5f5;
+         border: 1.8px solid #c9b8e8;
+         border-radius: 20px;
+         padding: 28px 24px 30px;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         transition: box-shadow 0.3s ease, transform 0.3s ease;
+      }
+
+      .ideal-card:hover {
+         transform: translateY(-4px);
+         box-shadow: 0 12px 32px rgba(77, 39, 135, 0.15);
+      }
+
+      /* ── Image wrapper ── */
+      .ideal-card-img-wrap {
+         width: 100%;
+         border-radius: 12px;
+         overflow: hidden;
+         margin-bottom: 22px;
+         flex-shrink: 0;
+      }
+
+      .ideal-card-img-wrap img {
+         width: 100%;
+         height: 210px;
+         object-fit: cover;
+         display: block;
+         transition: transform 0.45s ease;
+      }
+
+      .ideal-card:hover .ideal-card-img-wrap img {
+         transform: scale(1.04);
+      }
+
+      /* ── Title ── */
+      .ideal-card-title {
+         font-size: 1.05rem;
+         font-weight: 700;
+         color: #4d2787;
+         line-height: 1.4;
+         margin: 0;
+      }
+
+      /* ══════════════════════════════
+         RESPONSIVE
+      ══════════════════════════════ */
+      @media (max-width: 767px) {
+         .lp-heading { font-size: 1.6rem; margin-bottom: 30px; }
+         .ideal-for-section { padding: 44px 0 52px; }
+         .ideal-card { margin-bottom: 16px; }
+         .ideal-card-img-wrap img { height: 200px; }
+      }
+
+
+
+      .aaa-section {
+         background: #fff;
+         padding: 65px 0 75px;
+      }
+
+      .lp-heading {
+         font-size: 2.2rem;
+         font-weight: 700;
+         color: #4d2787;
+         text-align: center;
+         margin-bottom: 48px;
+      }
+
+      /* ══════════════════════════════
+         CARD
+      ══════════════════════════════ */
+      .aaa-card {
+         background: #ebe5f5;
+         border: 1.8px solid #c9b8e8;
+         border-radius: 20px;
+         padding: 28px 24px 30px;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         transition: box-shadow 0.3s ease, transform 0.3s ease;
+      }
+
+      .aaa-card:hover {
+         transform: translateY(-4px);
+         box-shadow: 0 12px 32px rgba(77, 39, 135, 0.15);
+      }
+
+      /* ── Image ── */
+      .aaa-card-img-wrap {
+         width: 100%;
+         border-radius: 12px;
+         overflow: hidden;
+         margin-bottom: 22px;
+         flex-shrink: 0;
+      }
+
+      .aaa-card-img-wrap img {
+         width: 100%;
+         height: 210px;
+         object-fit: cover;
+         display: block;
+         transition: transform 0.45s ease;
+      }
+
+      .aaa-card:hover .aaa-card-img-wrap img {
+         transform: scale(1.04);
+      }
+
+      /* ── Step badge ── */
+      .aaa-badge {
+         display: inline-flex;
+         align-items: center;
+         gap: 8px;
+         margin-bottom: 10px;
+      }
+
+      .aaa-badge-letter {
+         width: 34px;
+         height: 34px;
+         border-radius: 50%;
+         background: #4d2787;
+         color: #fff;
+         font-size: 1rem;
+         font-weight: 700;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+      }
+
+      .aaa-badge-duration {
+         font-size: 0.78rem;
+         font-weight: 500;
+         color: #7a52b8;
+         background: rgba(77, 39, 135, 0.1);
+         border-radius: 20px;
+         padding: 3px 10px;
+         white-space: nowrap;
+      }
+
+      /* ── Card text ── */
+      .aaa-card-label {
+         font-size: 0.72rem;
+         font-weight: 700;
+         color: #7a52b8;
+         letter-spacing: 1.2px;
+         text-transform: uppercase;
+         margin-bottom: 6px;
+      }
+
+      .aaa-card-title {
+         font-size: 1rem;
+         font-weight: 700;
+         color: #4d2787;
+         line-height: 1.45;
+         margin: 0;
+      }
+
+      /* ══════════════════════════════
+         RESPONSIVE
+      ══════════════════════════════ */
+      @media (max-width: 767px) {
+         .lp-heading { font-size: 1.6rem; margin-bottom: 30px; }
+         .aaa-section { padding: 44px 0 52px; }
+         .aaa-card { margin-bottom: 16px; }
+         .aaa-card-img-wrap img { height: 200px; }
       }
