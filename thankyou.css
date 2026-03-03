@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "CustomFont";
+    src: url('font/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "CustomFont" !important; */
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    font-family: 'CustomFont';
+    background: linear-gradient(115deg, #684f8c, #6da64d)
+}
+
+.navbar {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    height: 7vh
+  }
+
+  .logo-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+.button {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    background-color: #ed5926;
+    padding: 15px;
+    font-family: "CustomFont";
+}
+
+.customfont {
+    font-family: "CustomFont";
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+p{
+    font-family: "CustomFont";
+    font-size: 1.2rem;
+    font-weight: 500; 
+}
+
+
+
+
+@media only screen and (max-width: 486px) {
+    /* .navbar{
+        display: none;
+    } */
+
+    .logo img {
+        height: 50px;
+    }
+
+    .customfont {
+        font-size: 1.3rem;
+    }
+  
+    p {
+        font-size: 0.95rem;
+    }
+
+
+
+    /* .wrap {
+        justify-content: flex-start;
+    } */
+}
+
+
+
+
+
+
