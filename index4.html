@@ -1370,6 +1370,14 @@
       <h2 class="section-title" style="text-align:center;">Our Team of Mentors</h2>
     </div>
     <div class="faculty-grid">
+        <div class="faculty-card-h reveal reveal-delay-1">
+        <div class="faculty-photo"><img src="images/Chandra.jpg" alt="Prof. Chandravadan Goritiyal" loading="lazy"></div>
+        <div class="faculty-info">
+          <h4>Prof. Chandravadan Goritiyal</h4>
+          <p>Professor — Operations &amp; Program Incharge-MMS-2</p>
+          <button class="btn-view-more" onclick="openModal('chandraModal')">View Profile</button>
+        </div>
+      </div>
       <div class="faculty-card-h reveal">
         <div class="faculty-photo"><img src="images/Kaustubh.jpg" alt="Prof. Kaustubh Dhargalkar" loading="lazy"></div>
         <div class="faculty-info">
@@ -1394,21 +1402,13 @@
           <button class="btn-view-more" onclick="openModal('swapnilModal')">View Profile</button>
         </div>
       </div>
-      <div class="faculty-card-h reveal reveal-delay-1">
-        <div class="faculty-photo"><img src="images/Chandra.jpg" alt="Prof. Chandravadan Goritiyal" loading="lazy"></div>
-        <div class="faculty-info">
-          <h4>Prof. Chandravadan Goritiyal</h4>
-          <p>Professor — Operations &amp; Program Incharge-MMS-2</p>
-          <button class="btn-view-more" onclick="openModal('chandraModal')">View Profile</button>
-        </div>
-      </div>
       <!-- NEW FACULTY CARD — replace content when ready -->
       <div class="faculty-card-h reveal">
-        <div class="faculty-photo"><img src="images/faculty-new.jpg" alt="New Faculty Member" loading="lazy"></div>
+        <div class="faculty-photo"><img src="images/Prof.Vijay_More.png" alt="New Faculty Member" loading="lazy"></div>
         <div class="faculty-info">
-          <h4>Prof. New Faculty Name</h4>
-          <p>Professor — Subject Area | Specialization</p>
-          <button class="btn-view-more" onclick="openModal('newFacultyModal')">View Profile</button>
+          <h4>Prof.(Dr.) Praful Vijay More</h4>
+          <p>Assistant professor - Operations and Entrepreneurship</p>
+          <button class="btn-view-more" onclick="openModal('vijayModal')">View Profile</button>
         </div>
       </div>
     </div>
@@ -1602,25 +1602,34 @@
   </div>
 </div>
 
-<!-- NEW FACULTY MODAL — replace content when ready -->
-<div class="modal-overlay" id="newFacultyModal" onclick="closeModalOnBg(event, 'newFacultyModal')">
+<!-- NEW FACULTY MODAL — Prof. (Dr.) Praful Vijay More -->
+<div class="modal-overlay" id="vijayModal" onclick="closeModalOnBg(event, 'vijayModal')">
   <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('newFacultyModal')">×</button>
-    <h4>Prof. New Faculty Name</h4>
-    <span class="modal-role">Professor — Subject Area | Specialization</span>
+    <button class="modal-close" onclick="closeModal('vijayModal')">×</button>
+
+    <h4>Prof. (Dr.) Praful Vijay More</h4>
+    <span class="modal-role">Assistant Professor — Operations and Entrepreneurship</span>
+
     <strong>Education</strong>
     <ul>
-      <li>Degree — University Name, Year</li>
-      <li>Degree — University Name, Year</li>
+      <li>Ph.D.</li>
+      <li>PMP</li>
+      <li>MMS</li>
+      <li>BE (Chemical)</li>
     </ul>
+
     <strong>Teaching Experience</strong>
     <ul>
-      <li>X years teaching Subject at Institution</li>
+      <li>8+ years teaching at B-Schools like ITM (Kharghar), K. J. Somaiya Institute of Management, SP Jain Institute of Management, NMIMS University.</li>
+      <li>Areas of academic proficiency include Operations Research, Operations Management, Lean Six Sigma, and E-Business.</li>
     </ul>
+
     <strong>Industry Exposure</strong>
     <ul>
-      <li>Industry experience details here</li>
+      <li>4 years with an Engineering, Procurement and Construction company.</li>
+      <li>Presented papers at international conferences held across India.</li>
     </ul>
+
   </div>
 </div>
 
@@ -1751,15 +1760,17 @@
     });
 
     // form 
-    document.getElementById('spBookCallBtn').addEventListener('click', function() {
-    switchScreen('spScreenDontGo', 'spScreenForm');
-
-    var form = document.getElementById('ee-form-6');
-    var slot = document.getElementById('sp-form-slot');
-    if (form && slot && !slot.contains(form)) {
-        slot.appendChild(form);
-    }
-    });
+document.getElementById('spBookCallBtn').addEventListener('click', function() {
+  spClose();
+  var form = document.getElementById('ee-form-6');
+  if (form) {
+    setTimeout(function() {
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var firstInput = form.querySelector('input');
+      if (firstInput) firstInput.focus();
+    }, 300);
+  }
+});
 
 
     // "No thanks" skip
