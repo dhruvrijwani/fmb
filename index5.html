@@ -1373,12 +1373,9 @@
       }
 
       /* HARVARD MANAGEMENTOR */
+/* HARVARD MANAGEMENTOR */
       .hmm-section {
-        background: linear-gradient(
-          135deg,
-          var(--purple-dark) 0%,
-          #5c2d91 100%
-        );
+        background: var(--purple-pale); /* Updated Background */
         padding: 88px 0;
         position: relative;
         overflow: hidden;
@@ -1387,7 +1384,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
         background-size: 128px 128px;
         pointer-events: none;
         z-index: 0;
@@ -1396,10 +1393,8 @@
         content: "";
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(
-          rgba(255, 255, 255, 0.05) 1px,
-          transparent 1px
-        );
+        /* Changed from white dots to dark purple dots */
+        background-image: radial-gradient(rgba(90, 58, 138, 0.08) 1px, transparent 1px);
         background-size: 28px 28px;
         pointer-events: none;
         z-index: 0;
@@ -1413,83 +1408,142 @@
         margin-bottom: 56px;
       }
       .hmm-header .section-eyebrow {
-        background: rgba(109, 166, 77, 0.2);
-        color: #a8d98e;
+        background: var(--green-light); /* Light mode eyebrow */
+        color: var(--green-dark);
         border: 1px solid rgba(109, 166, 77, 0.35);
       }
       .hmm-header .section-title {
-        color: #fff;
+        color: var(--purple-dark); /* Changed from white */
         text-align: center;
         max-width: 680px;
         margin: 0 auto 12px;
       }
       .hmm-header .hmm-tagline {
         font-size: 1rem;
-        color: rgba(255, 255, 255, 0.7);
+        color: var(--gray-600); /* Changed from white */
         line-height: 1.6;
         max-width: 600px;
         margin: 0 auto;
       }
-      /* ── PATCH 1: Harvard ManageMentor logo ── */
-      .hmm-logo-wrap {
-        margin-top: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .hmm-logo-wrap img {
-        height: 80px;
-        width: auto;
-        max-width: 340px;
-        display: block;
-        transition: opacity var(--transition);
-      }
-      .hmm-logo-wrap img:hover {
-        opacity: 1;
-      }
-      @media (max-width: 768px) {
-        .hmm-logo-wrap img {
-          height: 60px;
-          max-width: 240px;
-        }
-      }
+
+      /* WHAT IS HMM BOX */
       .hmm-what-box {
-        background: rgba(255, 255, 255, 0.07);
-        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: #fff; /* Solid white background */
+        border: 1.5px solid #d8caf0; /* Light purple border */
         border-radius: var(--radius-lg);
         padding: 36px 40px;
         margin-bottom: 44px;
-        backdrop-filter: blur(6px);
+        box-shadow: 0 12px 32px rgba(59, 31, 110, 0.06); /* Soft shadow */
       }
       .hmm-what-box h3 {
         font-family: var(--font-display);
         font-size: 1.3rem;
-        color: #fff;
+        color: var(--purple-dark); /* Changed from white */
         margin-bottom: 12px;
       }
       .hmm-what-box p {
         font-size: 0.95rem;
-        color: rgba(255, 255, 255, 0.75);
+        color: var(--gray-600); /* Changed from white */
         line-height: 1.75;
       }
+
+      /* ENHANCED HARVARD CREDIBILITY BADGE (LIGHT MODE) */
+      .hmm-trust-strip {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 52px;
+        background: #fff; /* Solid white background */
+        border: 1.5px solid #d8caf0;
+        border-radius: var(--radius-lg);
+        padding: 36px 48px;
+        box-shadow: 0 16px 40px rgba(59, 31, 110, 0.08); /* Dark shadow */
+        position: relative;
+        overflow: hidden;
+        transition: transform var(--transition), box-shadow var(--transition);
+      }
+      .hmm-trust-strip:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 24px 50px rgba(59, 31, 110, 0.15);
+      }
+      .hmm-trust-strip::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 250px;
+        height: 120px;
+        background: rgba(110, 74, 163, 0.05); /* Soft purple glow */
+        filter: blur(45px);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 50%;
+      }
+      .hmm-trust-label {
+        font-size: 0.85rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--green-dark); /* Darker green for readability */
+        white-space: nowrap;
+        position: relative;
+        z-index: 1;
+      }
+      .hmm-trust-strip .hmm-logo-wrap {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .hmm-trust-strip .hmm-logo-wrap img {
+        height: 72px; 
+        width: auto;
+        max-width: 340px;
+        opacity: 0.85; 
+        display: block;
+        transition: transform var(--transition), opacity var(--transition);
+      }
+      .hmm-trust-strip:hover .hmm-logo-wrap img {
+        transform: scale(1.03); 
+        opacity: 1;
+      }
+      @media (max-width: 768px) {
+        .hmm-trust-strip {
+          padding: 28px 24px;
+          gap: 12px;
+        }
+        .hmm-trust-strip .hmm-logo-wrap img {
+          height: 52px;
+          max-width: 100%;
+        }
+        .hmm-trust-label {
+          font-size: 0.75rem;
+        }
+      }
+
+      /* HMM GRID CARDS */
       .hmm-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 18px;
       }
       .hmm-card {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: #fff; /* Solid white */
+        border: 1.5px solid #d8caf0; /* Light purple border */
         border-radius: var(--radius-md);
         padding: 26px 22px;
         transition: all var(--transition);
-        backdrop-filter: blur(6px);
+        box-shadow: 0 6px 20px rgba(59, 31, 110, 0.04);
       }
       .hmm-card:hover {
-        background: rgba(255, 255, 255, 0.14);
-        border-color: rgba(109, 166, 77, 0.4);
+        background: #fff;
+        border-color: var(--purple-mid);
         transform: translateY(-3px);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+        box-shadow: var(--shadow-hover);
       }
       .hmm-card-icon {
         width: 48px;
@@ -1504,7 +1558,7 @@
       .hmm-card-icon svg {
         width: 24px;
         height: 24px;
-        stroke: var(--green);
+        stroke: var(--green-dark); /* Slightly darker green */
         fill: none;
         stroke-width: 1.8;
         stroke-linecap: round;
@@ -1513,16 +1567,15 @@
       .hmm-card h4 {
         font-size: 0.95rem;
         font-weight: 700;
-        color: #fff;
+        color: var(--purple-dark); /* Changed from white */
         margin-bottom: 8px;
         line-height: 1.35;
       }
       .hmm-card p {
         font-size: 0.84rem;
-        color: rgba(255, 255, 255, 0.65);
+        color: var(--gray-600); /* Changed from white */
         line-height: 1.65;
       }
-
       /* PROGRAM OUTCOMES */
       .outcomes-section {
         background: var(--off-white);
