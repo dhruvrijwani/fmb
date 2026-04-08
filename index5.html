@@ -460,6 +460,33 @@
         margin: 0 auto;
         padding: 64px 24px;
       }
+      .hmm-trust-strip {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 44px;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: var(--radius-md);
+        padding: 18px 32px;
+        backdrop-filter: blur(6px);
+        }
+        .hmm-trust-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        white-space: nowrap;
+        }
+        .hmm-logo-wrap img {
+        height: 48px; /* reduce from 80px */
+        width: auto;
+        max-width: 240px;
+        filter: brightness(0) invert(1);
+        opacity: 0.85;
+        }
       .hero-content {
         color: #fff;
       }
@@ -3418,15 +3445,6 @@
       <div class="container">
         <div class="hmm-header reveal">
           <span class="section-eyebrow">Exclusive Access</span>
-            <!-- ═══ PATCH 1: HARVARD LOGO ═══ -->
-          <div class="hmm-logo-wrap">
-            <img
-              src="images/Logo/Harvard-ManageMentor.png"
-              alt="Harvard ManageMentor"
-              loading="lazy"
-            />
-          </div>
-          <!-- ═══ END HARVARD LOGO ═══ -->
           <h2 class="section-title">Harvard ManageMentor® Access</h2>
           <p class="hmm-tagline">
             Your Gateway to World-Class Management Skills
@@ -3442,6 +3460,13 @@
             refreshed with the latest ideas from Harvard Business School,
             Harvard Business Review, and leading industry experts.
           </p>
+        </div>
+        <!-- Remove hmm-logo-wrap from inside hmm-header, and place this after hmm-what-box -->
+        <div class="hmm-trust-strip reveal">
+        <p class="hmm-trust-label">In Partnership With</p>
+        <div class="hmm-logo-wrap">
+            <img src="images/Logo/Harvard-ManageMentor.png" alt="Harvard ManageMentor" loading="lazy" />
+        </div>
         </div>
         <div class="hmm-grid">
           <div class="hmm-card reveal">
