@@ -1219,7 +1219,7 @@
       }
       .aaa-card-label {
         font-size: 0.7rem;
-        font-weight: 700;
+        font-weight: 800;
         color: var(--purple-soft);
         letter-spacing: 1.2px;
         text-transform: uppercase;
@@ -1227,7 +1227,7 @@
       }
       .aaa-card h3 {
         font-size: 0.97rem;
-        font-weight: 700;
+        font-weight: 400;
         color: var(--purple-dark);
         line-height: 1.45;
       }
@@ -1706,12 +1706,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px;
-        align-items: start;
+        align-items: stretch;
       }
       .pd-box {
         border-radius: var(--radius-lg);
         padding: 36px 32px;
         border: 1.8px solid #d8caf0;
+        height: 100%;
       }
       .pd-box-eligibility {
         background: var(--purple-pale);
@@ -2165,7 +2166,7 @@
       }
       .faq-header-wrap {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 48px;
         align-items: end;
         margin-bottom: 52px;
@@ -2214,8 +2215,7 @@
       }
       .faq-header-right {
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
+        margin-top: 16px;
       }
       .faq-grid {
         display: grid;
@@ -2445,6 +2445,9 @@
       .mobile-sticky-inner {
         display: grid;
         grid-template-columns: 1fr 1px 1fr;
+      }
+      .mobile-sticky-inner .db-btn {
+        background: var(--green-dark);
       }
       .mobile-sticky-divider {
         background: rgba(255, 255, 255, 0.2);
@@ -3178,6 +3181,28 @@
           grid-template-columns: 1fr;
         }
       }
+
+      @media (max-width: 768px) {
+        .hmm-side-by-side { grid-template-columns: 1fr !important; }
+        .hmm-side-by-side .hmm-trust-strip { order: -1; }
+      }
+
+      .ideal-card ul {
+        margin-top: 10px;
+        padding-left: 18px;
+        list-style: disc;
+      }
+
+      .ideal-card ul li {
+        font-size: 0.85rem;
+        color: var(--purple-dark);
+        line-height: 1.6;
+        margin-bottom: 6px;
+      }
+
+      .ideal-card ul li:last-child {
+        margin-bottom: 0;
+      }
     </style>
   </head>
 
@@ -3285,7 +3310,7 @@
         <div class="hero-content">
           <div class="hero-badge">
             <span class="hero-badge-dot"></span>
-            PGP in Entrepreneurship &amp; Family Business
+            PGP in Entrepreneurship &amp; Family Managed Business
           </div>
           <h1 class="hero-headline">
             Don't Just Inherit the Business.<br />
@@ -3307,7 +3332,7 @@
             >
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
-            <span>11-month application-based learning</span>
+            <span>11-month full time program</span>
             <span class="hero-credibility-sep"></span>
             <svg
               viewBox="0 0 24 24"
@@ -3319,7 +3344,7 @@
               <circle cx="12" cy="12" r="10" />
               <polyline points="12 6 12 12 16 14" />
             </svg>
-            <span>Now in its 22nd year</span>
+            <span>1 week on campus</span>
             <span class="hero-credibility-sep"></span>
             <svg
               viewBox="0 0 24 24"
@@ -3333,7 +3358,7 @@
               <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
-            <span>Mumbai Campus</span>
+            <span>3 weeks applying learnings</span>
           </div>
           <div class="hero-ctas">
             <a
@@ -3550,6 +3575,9 @@
           </div>
         </div>
         <!-- ═══ END LOGO STRIP ═══ -->
+        <div style="text-align: center; margin-top: 32px;">
+          <a href="#ee-form-6" class="btn-primary" onclick="scrollToForm(event)">Apply Now</a>
+        </div>
       </div>
     </section>
 
@@ -3563,24 +3591,32 @@
             Your Gateway to World-Class Management Skills
           </p>
         </div>
-        <div class="hmm-what-box reveal">
-          <h3>What is Harvard ManageMentor?</h3>
-          <p>
-            As part of EFMB, you gain exclusive access to Harvard ManageMentor
-            (HMM), the trusted standard for skill development used by over 1.5
-            million learners globally. Harvard ManageMentor is Harvard Business
-            School Publishing's premier digital learning platform, continuously
-            refreshed with the latest ideas from Harvard Business School,
-            Harvard Business Review, and leading industry experts.
-          </p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:44px; align-items:stretch;" class="reveal hmm-side-by-side">
+          
+          <!-- LEFT: What is HMM -->
+          <div class="hmm-what-box" style="margin-bottom:0;">
+            <h3>What is Harvard ManageMentor?</h3>
+            <p>
+              As part of EFMB, you gain exclusive access to Harvard ManageMentor
+              (HMM), the trusted standard for skill development used by over 1.5
+              million learners globally. Harvard ManageMentor is Harvard Business
+              School Publishing's premier digital learning platform, continuously
+              refreshed with the latest ideas from Harvard Business School,
+              Harvard Business Review, and leading industry experts.
+            </p>
+          </div>
+
+          <!-- RIGHT: Logo box -->
+          <div class="hmm-trust-strip" style="margin-bottom:0;">
+            <p class="hmm-trust-label">In Partnership With</p>
+            <div class="hmm-logo-wrap">
+              <img src="images/Logo/Harvard-ManageMentor.png" alt="Harvard ManageMentor" loading="lazy" style="height:110px;" />
+            </div>
+          </div>
+
         </div>
-        <!-- Remove hmm-logo-wrap from inside hmm-header, and place this after hmm-what-box -->
-        <div class="hmm-trust-strip reveal">
-        <p class="hmm-trust-label">In Partnership With</p>
-        <div class="hmm-logo-wrap">
-            <img src="images/Logo/Harvard-ManageMentor.png" alt="Harvard ManageMentor" loading="lazy" />
-        </div>
-        </div>
+
         <div class="hmm-grid">
           <div class="hmm-card reveal">
             <div class="hmm-card-icon">
@@ -4158,6 +4194,10 @@
               loading="lazy"
             />
             <h3>Next Gen Family Business Scions</h3>
+            <ul>
+              <li>Heirs preparing to lead family enterprises with modern frameworks</li>
+              <li>Young leaders bridging tradition with innovation and strategic vision</li>
+            </ul>
           </div>
           <div class="ideal-card reveal reveal-delay-1">
             <img
@@ -4167,6 +4207,10 @@
               loading="lazy"
             />
             <h3>Budding Entrepreneurs</h3>
+            <ul>
+              <li>First-generation builders scaling startups into sustainable enterprises</li>
+              <li>Entrepreneurs professionalizing operations and building growth systems</li>
+            </ul>
           </div>
           <div class="ideal-card reveal reveal-delay-2">
             <img
@@ -4176,6 +4220,10 @@
               loading="lazy"
             />
             <h3>Business Family Millennials</h3>
+            <ul>
+              <li>Young professionals modernizing traditional businesses with digital strategies</li>
+              <li>Next-generation leaders balancing legacy respect with competitive innovation</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -4214,7 +4262,7 @@
                 professionalization
               </li>
             </ul>
-            <p class="pd-subsection-label">Ideal candidates:</p>
+            <!-- <p class="pd-subsection-label">Ideal candidates:</p>
             <ul class="pd-list">
               <li>
                 Next-generation business scions preparing for leadership roles
@@ -4230,7 +4278,7 @@
                 foundations
               </li>
               <li>Business leaders navigating succession planning</li>
-            </ul>
+            </ul> -->
             <div class="pd-cta">
               <a
                 href="#ee-form-6"
@@ -4462,7 +4510,7 @@
     <!-- CTA BANNER -->
     <div class="cta-banner">
       <div class="cta-left">
-        <h2>Ready to accelerate<br />your leadership journey?</h2>
+        <h2>Ready to transform<br />your family business?</h2>
       </div>
       <a href="#ee-form-6" class="cta-right" onclick="scrollToForm(event)">
         <h3>Book 1-1<br />Free Counselling</h3>
@@ -4492,21 +4540,6 @@
               &amp; Family-Managed Business. Browse through the most common
               questions from prospective students below.
             </p>
-          </div>
-          <div class="faq-header-right">
-            <div class="faq-contact-box">
-              <h3>Still have questions?</h3>
-              <p>
-                Our counsellors are ready to help you make the right decision
-                for your business journey.
-              </p>
-              <a
-                href="#ee-form-6"
-                class="btn-primary"
-                onclick="scrollToForm(event)"
-                >Book Free Counselling</a
-              >
-            </div>
           </div>
         </div>
         <div class="faq-grid">
@@ -4768,6 +4801,24 @@
             </div>
           </div>
         </div>
+
+        <div class="faq-header-wrap reveal">
+
+          <div class="faq-header-right">
+            <div class="faq-contact-box">
+              <h3>Applications are now open</h3>
+              <p>
+                Join the next generation of leaders transforming their family businesses with proven strategies.
+              </p>
+              <a
+                href="#ee-form-6"
+                class="btn-primary"
+                onclick="scrollToForm(event)"
+                >Apply Now</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -4977,7 +5028,7 @@
     <!-- STICKY MOBILE BAR -->
     <div class="mobile-sticky">
       <div class="mobile-sticky-inner">
-        <a href="#ee-form-6" onclick="scrollToForm(event)">
+        <a href="#ee-form-6" class="db-btn" onclick="scrollToForm(event)">
           <svg viewBox="0 0 24 24">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
             <polyline points="7 10 12 15 17 10" />
@@ -5041,15 +5092,13 @@
           </div>
           <div class="sp-body-pad">
             <p class="sp-tagline">
-              Have a <span class="sp-green">1:1 call</span> with an
+              Discover the best <span class="sp-green">path</span> forward with a
             </p>
             <p class="sp-tagline">
-              <strong>Ivy League Expert</strong> instead!
+              <strong>personalized 1-on-1</strong> session.
             </p>
-            <button class="sp-book-btn" id="spBookCallBtn">Book a Call</button>
-            <button class="sp-skip" id="spSkipBtn">
-              No thanks, I'll look around
-            </button>
+            <button class="sp-book-btn" id="spBookCallBtn">Book My Free Counseling Session</button>
+
           </div>
         </div>
         <div class="sp-screen" id="spScreenForm" data-hidden>
@@ -5131,19 +5180,7 @@
               }, 300);
             }
           });
-        document.getElementById("spSkipBtn").addEventListener("click", spClose);
-        function switchScreen(hideId, showId) {
-          var hide = document.getElementById(hideId);
-          var show = document.getElementById(showId);
-          hide.setAttribute("data-hidden", "");
-          hide.style.display = "";
-          show.removeAttribute("data-hidden");
-          show.style.display = "block";
-          var box = document.getElementById("scrollPopupBox");
-          box.style.animation = "none";
-          void box.offsetHeight;
-          box.style.animation = "";
-        }
+
       })();
 
       function scrollToForm(e) {
